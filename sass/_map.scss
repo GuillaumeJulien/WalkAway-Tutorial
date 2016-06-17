@@ -6,7 +6,7 @@
   background-color: #1a58e0;
   box-shadow: 0 0 20px #1a58e0;
   transition: all .5s;
-  &:hover,&:active{
+  &:hover,&.active{
     background-color: #2faafc;
     box-shadow: 0 0 20px #2faafc;
   }
@@ -35,11 +35,42 @@
     z-index: 20;
       transform-origin: 51% 55%;
       animation: viseurhoraire  4s  linear infinite;
-
   }
 
 }
-
+#popin-tuto{
+  position: absolute;
+  width: 360px;
+  height: 140px;
+  #popin{
+    #title{
+      color: rgb(245, 248, 249);
+      font-family: Gotham;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    #content{
+      padding-left: 21px;
+      padding-top: 22px;
+      padding-bottom: 33px;
+      /* Style for "fond - pop" */
+      width: 250px;
+      height: 70px;
+      -webkit-clip-path: polygon(81% 0, 100% 16%, 100% 100%, 0% 100%, 0% 0%);
+      clip-path: polygon(81% 0, 100% 16%, 100% 100%, 0% 100%, 0% 0%);
+      border: 2px solid rgba(131, 165, 196, 0.4);
+      background-color: rgba(39,49,57,0.5);
+      p{
+        color: rgb(207, 225, 232);
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+    }
+  }
+}
 #map{
   height: 100%;
   width: 100%;
@@ -53,8 +84,8 @@
 }
 #light-2{
 
-  left: 160px;
-  top:140px;
+  left:1790px;
+  top:170px;
 }
 #light-3{
   left:690px;
@@ -71,8 +102,4 @@
 #light-6{
   left:1450px;
   top:680px;
-}
-#light-7{
-  left:1790px;
-  top:170px;
 }

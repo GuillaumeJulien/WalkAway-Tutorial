@@ -9,6 +9,15 @@
   <main>
 
     <div class="container" id="map">
+      <div id="popin-tuto">
+        <div id="line"></div>
+        <div id="popin">
+          <h1 id="title">Outil de détection</h1>
+          <div id="content">
+            <p>Cliquez à l’aide du réticule sur votre position pour commencer l’analyse de cet élément.</p>
+          </div>
+        </div>
+      </div>
       <div id="viseur">
         <svg id="Detection_RA" data-name="Detection RA" xmlns="http://www.w3.org/2000/svg" width="329.48" height="329.48" viewBox="0 0 329.48 329.48">
           <g class="inner-circle">
@@ -31,7 +40,6 @@
       <div class="light" id="light-4"></div>
       <div class="light" id="light-5"></div>
       <div class="light" id="light-6"></div>
-      <div class="light" id="light-7"></div>
 
       <div id="dialogue-box-container">
         <div class="dialogue-box-components dialogue-box-side" id="dialogue-box-left"></div>
@@ -44,6 +52,7 @@
   </main>
   <script src='./js/main.js'></script>
   <script src='./js/viseur.js'></script>
+  <script src='./js/light.js'></script>
   <script type="text/javascript">
     viseur.init();
   </script>
