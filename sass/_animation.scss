@@ -3,6 +3,6 @@
   100%{ transform: rotate(-360deg);}
 }
 @keyframes viseurtrigo{
-  100%{ transform: rotate(360deg);
-  }
+  100%{ transform: rotate(360deg);}
 }
+@keyframes pulse {to {box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);}}
