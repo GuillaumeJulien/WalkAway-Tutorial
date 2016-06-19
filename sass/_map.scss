@@ -13,6 +13,10 @@
   &.analize{
     animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   }
+  &.analised{
+    background-color: #ef2c0f;
+    box-shadow: 0 0 20px #ef2c0f;
+  }
 }
 #viseur{
   transform-origin: center;
@@ -79,11 +83,10 @@
       padding-right: 43px;
       position: relative;
       width: 250px;
-      height: 70px;
-      border: 2px solid rgba(131, 165, 196, 0.4);
-      background-color: rgba(39,49,57,0.5);
-      background-size: 2px 100%, 2px 100%, 100% 2px, 100% 2px, 25px 25px, 100% 100%, 100% 100%;
-      background-position: 0% 0%, 100% 25px, -25px 0%, 0px 100%, 100% 0%, -25px 0%, 100% 25px;
+      height: 80px;
+      background-image: url('../assets/img/fond---popin.svg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
       p{
         color: rgb(207, 225, 232);
         font-family: 'Source Sans Pro', sans-serif;

@@ -16,7 +16,7 @@ Viseur.prototype.initVars = function () {
     this.outterCircle = document.getElementById('outter-circle');
     this.activeLight = {};
     var numOfLight = document.getElementsByClassName('light').length;
-    for (var i=1; i < numOfLight; i++ ) {
+    for (var i=1; i <= numOfLight; i++ ) {
         var light = new Light(i);
         light.init();
         lights.push(light);
@@ -34,12 +34,12 @@ Viseur.prototype.initEvents = function () {
 
     self.x =  self.viseurel.offsetLeft;
     self.y = self.viseurel.offsetTop;
+
     for(var light in lights){
-      if (isAround(lights[light],self)<= 120) {
+      if (isAround(lights[light],self)<= 150) {
         self.activeLight = lights[light].setActive();
       }else {
         lights[light].setInactive();
-
       }
     }
   };
@@ -57,11 +57,10 @@ Viseur.prototype.setActive = function () {
     self.outterCircle.className += ' ' + 'active';
   }
   if(self.activeLight.domElement.classList){
-    self.activeLight.domElement.classList.add("analize");
-  }else{
-      self.activeLight.domElement.className += ' ' + 'analize';
+      self.activeLight.setAnalizeOn();
   }
 };
+
 Viseur.prototype.setInactive = function () {
   var self = this;
   if (self.innerCircle.classList && self.outterCircle.classList.remove ){
@@ -72,9 +71,7 @@ Viseur.prototype.setInactive = function () {
     self.outterCircle.className = self.viseurel.className.replace(new RegExp('(^|\\b)' + "active".split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
   }
   if(self.activeLight.domElement.classList){
-    self.activeLight.domElement.classList.remove("analize");
-  }else{
-    self.activeLight.domElement.className =  self.domElement.className.replace(new RegExp('(^|\\b)' + "active".split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    self.activeLight.setAnalizeOff();
   }
 };
 
