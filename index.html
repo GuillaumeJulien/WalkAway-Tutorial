@@ -10,12 +10,15 @@
 
     <div class="container" id="map">
       <div id="popin-feedbacks">
-        <img src="" alt="" />
+        <div class="content">
+          <h1 class="title">Carte Mise à Jour</h1>
+          <p id="content-feedbacks"></p>
+        </div>
       </div>
       <div id="popin-tuto" class="">
         <div id="line"><img src="assets/img/ligne---popin.png" alt=""></div>
         <div id="popin">
-          <h1 id="title">Outil de détection</h1>
+          <h1 class="title">Outil de détection</h1>
           <div id="content">
             <p>Cliquez à l’aide du réticule sur votre position pour commencer l’analyse de cet élément.</p>
           </div>
@@ -37,12 +40,12 @@
         </g>
       </svg>
     </div>
-      <div class="light " id="light-1"></div>
-      <div class="light" id="light-2"></div>
-      <div class="light" id="light-3"></div>
-      <div class="light" id="light-4"></div>
-      <div class="light" id="light-5"></div>
-      <div class="light" id="light-6"></div>
+      <div class="light " id="light-1" text="Quartier générale"></div>
+      <div class="light" id="light-2" text="Point de livraison"></div>
+      <div class="light" id="light-3" text="Point antenne radar"></div>
+      <div class="light" id="light-4" text="Point antenne radar"></div>
+      <div class="light" id="light-5" text="Balise détecté"></div>
+      <div class="light" id="light-6" text="Point de base"></div>
 
       <div id="dialogue-box-container">
         <div class="dialogue-box-components" id="dialogue-box">
@@ -53,6 +56,7 @@
   </main>
   <script src='./js/main.js'></script>
   <script src='./js/viseur.js'></script>
+  <script src='./js/popin-feedback.js'></script>
   <script src='./js/light.js'></script>
   <script type="text/javascript">
     viseur.init();

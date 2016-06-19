@@ -3,13 +3,17 @@
   top: -220px;
   left: 42%;
   width:295px;
-  height: 245px;
+  max-height: 245px;
   background-image: url('../assets/img/fond.png');
   background-repeat: no-repeat;
   background-position: 100% 100%;
   transition: top .5s;
   &.active{
     top: -5px;
+  }
+  .content{
+    padding-top: 10px;
+    text-align: center;
   }
 
 }

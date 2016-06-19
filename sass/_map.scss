@@ -69,13 +69,6 @@
     left: -100px;
   }
   #popin{
-    #title{
-      color: rgb(245, 248, 249);
-      font-family: Gotham;
-      font-size: 15px;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
     #content{
       padding-left: 21px;
       padding-top: 22px;
@@ -87,13 +80,6 @@
       background-image: url('../assets/img/fond---popin.svg');
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      p{
-        color: rgb(207, 225, 232);
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 24px;
-      }
     }
   }
 }

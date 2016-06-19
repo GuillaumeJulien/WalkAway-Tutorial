@@ -9,11 +9,13 @@ Light.prototype.initVars = function () {
     this.toggled = false;
     this.domElement = document.getElementById('light-'+this.id);
     this.popinEl= document.getElementById('popin-tuto');
+    this.text = this.domElement.getAttribute('text');
     this.x = this.domElement.offsetLeft;
     this.y = this.domElement.offsetTop;
 
 };
 Light.prototype.initEvents = function () {
+
 };
 
 Light.prototype.setActive = function () {
@@ -32,8 +34,7 @@ Light.prototype.setActive = function () {
 };
 
 Light.prototype.setInactive = function () {
-
-  self = this;
+  var self = this;
 
   if (self.domElement.classList){
     self.domElement.classList.remove("active");
@@ -74,7 +75,7 @@ Light.prototype.setAnalizeOn = function () {
       self.domElement.className += ' ' + 'analize';
     }
     self.setInactivePopin();
-    setTimeout(self.setAnalized.bind(this), 2000);
+    setTimeout(self.setAnalized.bind(this), 1000);
 
 };
 Light.prototype.setAnalizeOff = function () {
@@ -92,4 +93,6 @@ Light.prototype.setAnalized = function () {
   }else{
     self.domElement.className += ' ' + 'analised';
   }
+  popinFeedBacks.setActive();
+  popinFeedBacks.setText(self.text);
 };
