@@ -25,8 +25,13 @@
 
   height: 55%;
   width: 60%;
-  
+
   border-left: 2px solid #3e4f5c;
   border-right: 2px solid #3e4f5c;
   background-color: rgba(39,50,59,0.8);
+  span{
+    color: #bae4d6;
+	  font-size: 33px;
+    animation: blink  1.5s  linear infinite;
+  }
 }

@@ -6,3 +6,11 @@
   100%{ transform: rotate(360deg);}
 }
 @keyframes pulse {to {box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);}}
+
+@keyframes blink {
+    0% { opacity:0 }
+    25% { opacity:1 }
+    50% { opacity: 1 }
+    75% { opacity: 1 }
+    100% { opacity: 0 }
+}
